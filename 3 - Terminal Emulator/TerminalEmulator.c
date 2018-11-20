@@ -7,9 +7,12 @@ int main(){
         char password[50];
         char FullName[50];
     };
-    int loadingtime; //Makes loading seem like ., .., ...
-    while(loadingtime < 5){
-        printf("Loading.")
-    }
+    FILE *fp;
+    char buff[225];
+    char buff2[225]
+    fp = fopen("account.txt", "r");
+    fscanf(fp, "%s", buff);
+    fscanf(fp, "%s", buff2);
+    if(
     
 }
