@@ -13,6 +13,8 @@ int main(){
     fp = fopen("account.txt", "r");
     fscanf(fp, "%s", buff);
     fscanf(fp, "%s", buff2);
-    if(
+    if(strcmp(buff, "") == 0 && strcmp(buff2, "") == 0){
+        printf("BBBBBBOOOOOOOOO!!!!!");
+    }
     
 }
