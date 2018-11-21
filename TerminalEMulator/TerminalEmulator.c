@@ -3,6 +3,23 @@
 #include <string.h>
 
 char CreateAccount(){
+    FILE *fp;
+    fp = fopen("account.txt", "w+");
+    printf("Please Enter a Username: ");
+    char createusername[225];
+    scanf("%s", &createusername);
+    fprintf(fp, "%s\n", createusername);
+    printf("Please Enter a Password: ");
+    char createpassword[225];
+    scanf("%s", &createpassword);
+    fprintf(fp, "%s\n", createpassword);
+    fclose(fp);
+    Terminal(&createusername);
+}
+
+char login(char* fileusername, char* filepassword){
+    FILE *fp;
+    fp = fopen("account.txt", "r");
     
 }
 
@@ -24,7 +41,7 @@ int main(){
             return 0;
         }
     } else {
-        Login(&buff, &buff2);
+        login(&buff, &buff2);
     }
     return 0;
 }
