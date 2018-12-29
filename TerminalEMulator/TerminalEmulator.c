@@ -2,6 +2,10 @@
 #include <time.h>
 #include <string.h>
 
+int Terminal(char* username){
+    printf("Hello, %s\n", username);
+}
+
 char CreateAccount(){
     FILE *fp;
     fp = fopen("account.txt", "w+");
@@ -17,9 +21,21 @@ char CreateAccount(){
     Terminal(&createusername);
 }
 
-char login(char* fileusername, char* filepassword){
+void login(char* fileusername, char* filepassword){
+    int i;
     FILE *fp;
     fp = fopen("account.txt", "r");
+    char typeusername[225];
+    char typepassword[225];
+    printf("Username: ");
+    scanf("%s", &typeusername);
+    printf("Password: ");
+    scanf("%s", &typepassword);
+    if(strcmp(typeusername, fileusername) == 0 && strcmp(typepassword, filepassword) == 0){
+        Terminal(&fileusername);
+    } else {
+        char bad[] = "BBBOOOO!!";
+    }
     
 }
 
