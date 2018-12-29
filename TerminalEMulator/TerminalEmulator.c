@@ -4,6 +4,8 @@
 
 int Terminal(char* username){
     printf("Hello, %s\n", username);
+    sleep(1);
+    
 }
 
 char CreateAccount(){
