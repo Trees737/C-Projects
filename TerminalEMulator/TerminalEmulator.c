@@ -3,9 +3,9 @@
 #include <string.h>
 
 int Terminal(char* username){
+    char input[225];
     printf("Hello, %s\n", username);
     sleep(1);
-    
 }
 
 char CreateAccount(){
@@ -37,6 +37,7 @@ void login(char* fileusername, char* filepassword){
         Terminal(&fileusername);
     } else {
         char bad[] = "BBBOOOO!!";
+        printf("%s\n", bad);
     }
     
 }
